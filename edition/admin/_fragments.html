@@ -11,40 +11,11 @@
   <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
   <!-- 以下是修改内容 -->
   <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/iconfont/iconfont.css">
 </head>
 
 <body>
   <!--导航-->
-  <nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
-    <div class="ui container">
-      <div class="ui inverted secondary stackable menu">
-        <h2 class="ui blue header item">管理后台</h2>
-        <a href="blogs.html" th:href="@{/admin/blogs}" class=" m-item item m-mobile-hide"
-          th:classappend="${n==1} ? 'active'"><i class="home icon"></i>博客</a>
-        <a href="types.html" th:href="@{/admin/types}" class=" m-item item m-mobile-hide"
-          th:classappend="${n==2} ? 'active'"><i class="idea icon"></i>分类</a>
-        <a href="tags.html" th:href="@{/admin/tags}" class="m-item item m-mobile-hide"
-          th:classappend="${n==3} ? 'active'"><i class="tags icon"></i>标签</a>
-        <div class="right m-item m-mobile-hide menu">
-          <!--        用户名显示区域-->
-          <div class="ui dropdown  item">
-            <div class="text">
-              <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005"
-                th:src="@{${session.user.avatar}}">
-              <span th:text="${session.user.nickname}">zhangsan</span>
-            </div>
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
-      <i class="sidebar icon"></i>
-    </a>
-  </nav>
   <nav class="navbar navbar-light navbar-inverse bg-secondary" style="padding-left: 5%;padding:0 10%;">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,17 +35,17 @@
         <ul class="nav navbar-nav">
           <li class="active">
             <a href="#">
-              <span class="glyphicon glyphicon-home"></span> 博客 <span class="sr-only">(current)</span>
+              <span class="iconfont icon-xieboke"></span> 博客 <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="">
             <a href="#">
-              <span class="glyphicon glyphicon-list-alt"></span> 分类 <span class="sr-only">(current)</span>
+              <span class="iconfont icon-fenlei"></span> 分类 <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="">
             <a href="#">
-              <span class="glyphicon glyphicon-tags"></span> 标签 <span class="sr-only">(current)</span>
+              <span class="iconfont icon-24gf-tags2"></span> 标签 <span class="sr-only">(current)</span>
             </a>
           </li>
         </ul>
@@ -82,9 +53,9 @@
         <div class="navbar-right dropdown bg-secondary">
           <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
             style="background-color: #222;">
-            <img decoding=" async" src="../../static/images/avatar.png" class="img-circle" style="height: 35px;">
+            <img decoding=" async" src="../../static/images/avatar.png" class="img-circle" style="height: 30px;">
             <span class="text-light" style="color: #f0f0f0f0;" th:text="${session.user.nickname}">zhangsan</span>
-            <span class="caret"></span>
+            <span class="caret" style="color: white;"></span>
           </button>
 
           </button>
@@ -97,19 +68,16 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <!--导航-->
+  <br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!--底部footer-->
   <footer style="text-align: center;background-color: rgba(0,0,0,.87);color:#9d9d9d;height: 10rem;">
     <div class="card-body">
       <p class="card-text" style="line-height: 10rem;">Copyright © 2022 - 2023 Blog System Designed by Zhangsan
       </p>
     </div>
   </footer>
-  <!--底部footer-->
-  <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
-    <div class="ui center aligned container">
-      <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2022 - 2023 Blog System Designed by Zhangsan</p>
-    </div>
-  </footer>
+
   <th:block th:fragment="script">
     <script src="../../static/js/jquery-3.6.3.min.js"></script>
     <script src="../../static/js/bootstrap.min.js"></script>
