@@ -50,18 +50,17 @@
           </li>
         </ul>
 
-        <div class="navbar-right dropdown bg-secondary">
+        <div class="navbar-right dropdown bg-secondary " style="margin:3px 0">
           <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-            style="background-color: #222;">
+            style="background-color: #222;outline:darkturquoise;">
             <img decoding=" async" src="../../static/images/avatar.png" class="img-circle" style="height: 30px;">
             <span class="text-light" style="color: #f0f0f0f0;" th:text="${session.user.nickname}">zhangsan</span>
             <span class="caret" style="color: white;"></span>
           </button>
 
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width: 80px;">
             <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">注销</a>
+              <a role="menuitem" tabindex="-1" href="#" style="outline:darkturquoise;">注销</a>
             </li>
           </ul>
         </div>

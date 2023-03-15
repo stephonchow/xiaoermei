@@ -138,7 +138,7 @@
         <input type="checkbox">推荐
 
         <button type="button" id="search-btn" class="btn btn-xs"
-          style="border: 2px solid #170263;border-radius: 3px;outline: none;font-size: 16px;"><i
+          style="border: 2px solid slategray;border-radius: 3px;outline: none;font-size: 16px;"><i
             class="iconfont icon-sousuo" style="font-weight: 800;"></i>搜索</button>
       </div>
       <div class="media-body">
@@ -174,9 +174,9 @@
             <td th:text="${blog.updateTime}">2022-12-22 22:22</td>
             <td>
               <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class=""
-                style="padding:3px 5px;border: 2px solid skyblue ;border-radius: 3px;background-color: rgb(232, 232, 232);">编辑</a>
+                style="padding:3px 5px;border: 2px solid skyblue ;border-radius: 3px;background-color: #fff;text-decoration: none;">编辑</a>
               <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class=""
-                style="padding:3px 5px;border: 2px solid red ;border-radius: 3px;background-color: rgb(232, 232, 232);color: red;">删除</a>
+                style="padding:3px 5px;border: 2px solid red ;border-radius: 3px;background-color: #fff;color: red;text-decoration: none;">删除</a>
             </td>
           </tr>
         </tbody>
